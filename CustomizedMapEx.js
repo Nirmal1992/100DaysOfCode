@@ -24,8 +24,8 @@ const callBackFn = function(element, index, arr) {
 
 console.log(_.map({ a: 'A', b: 'B', c: 'C' }, callBackFn));
 
-//expect output: [ 'broken A', 'broken B', 'broken C' ]
+//expect output: [ 'tranformed A', 'tranformed B', 'tranformed C' ]
 
 console.log(_.map(['A', 'B', 'C'], callBackFn));
 
-//expect output: [ 'broken A', 'broken B', 'broken C' ]
+//expect output: [ 'tranformed A', 'tranformed B', 'tranformed C' ]
