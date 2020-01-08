@@ -9,6 +9,7 @@ _.from = function(arguments) {
 
 function sayHi() {
   const arr = _.from(arguments);
+  arr.push('Santosh');
   console.log(arr);
 }
 
