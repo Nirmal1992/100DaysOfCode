@@ -8,9 +8,14 @@ __Currying__
   var abc = function(a,b,c){
     return [a,b,c];
   }
-  var curried = _.curry(abc);
+  var curried = _.curry(abc); // can be called  at least arity number of arguments which is function length
   curried(1)(2)(3) //[1, 2, 3]
   curried(1,2)(3)  //[1, 2, 3]
+  
+  const cury1 = curried(1);
+  const cury2 = cury1(2);
+  const cury3 = cury2(3);
+  console.log(cury1,cury2,cury3) // fn, fn, [1, 2, 3]
  ``` 
 
 ## Day 10 of Day100
