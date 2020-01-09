@@ -1,8 +1,20 @@
 # 100DaysOfCode
 Learning FrontEnd Technologies in-depth
 
+## Day 11 of Day100
+__Currying__
+* Currying is when you create a function that can later be called multiple times with different arguments.
+```
+  var abc = function(a,b,c){
+    return [a,b,c];
+  }
+  var curried = _.curry(abc);
+  curried(1)(2)(3) //[1, 2, 3]
+  curried(1,2)(3)  //[1, 2, 3]
+ ``` 
+
 ## Day 10 of Day100
-_Difference between null and undefined_
+__Difference between null and undefined__
 * A value is `undefined` when a variable is declared and value is yet assigned. 
 * `typeof` `undefined` is `undefined` in javascript which is a primitive value.
 * You can explicity define a variable as `undefined` as below:
