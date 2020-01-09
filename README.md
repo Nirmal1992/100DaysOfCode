@@ -17,6 +17,15 @@ __Currying__
   const cury3 = cury2(3);
   console.log(cury1,cury2,cury3) // fn, fn, [1, 2, 3]
  ``` 
+ __Composing__
+ * Composing is when you take two or more function and combine them esentially where each function consumes the return value of the function that follows.
+ ```
+  var greet    = function(name){ return "hi: " + name; };
+  var exclaim  = function(statement){ return statement.toUpperCase() + "!"; };
+  var welcome = _.compose(greet, exclaim);
+  welcome('nirmal');
+  // 'hi: NIRMAL!'
+ ```
 
 ## Day 10 of Day100
 __Difference between null and undefined__
