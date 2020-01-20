@@ -27,6 +27,13 @@ __The Box Model__
 * The overflow property can be set to display, hide, or scroll, and dictates how HTML will render content that overflows its parent’s c   content area.
 * The visibility property can hide or show elements.
 
+__Changing the Box Model__
+* In the default box model, box dimensions are affected by border thickness and padding.
+* The box-sizing property controls the box model used by the browser.
+* The default value of the box-sizing property is content-box.
+* The value for the new box model is border-box.
+* The border-box model is not affected by border thickness or padding.
+
 
 ## Day 14 of Day100
 __Render React on the Server with renderToString__
