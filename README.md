@@ -15,8 +15,6 @@ __CSS DISPLAY AND POSITIONING__
   container width.
 * The float property can move elements as far left or as far right as possible on a web page.
 * You can clear an element’s left or right side (or both) using the clear property.
-* When combined with an understanding of the box model, positioning can create visually appealing web pages. So far, we’ve focused on 
-  adding content in the form of text to a web page. In the next unit, you’ll learn how to add and manipulate images to a web page.
 
 ## Day 17 of Day100
 __CSS Selectors__
