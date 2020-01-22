@@ -2,6 +2,102 @@
 Learning FrontEnd Technologies in-depth
 
 ## Day 19 of Day100
+__CSS GRID__
+* To set up a grid, you need to have both a grid container and grid items. The grid container will be a parent element that contains   
+  grid items as children and applies overarching styling and positioning to them.
+* To turn an HTML element into a grid container, you must set the element’s display property to `grid` (for a block-level grid) or      
+  `inline-grid` (for an inline grid). 
+* `grid-template-columns` defines the number and sizes of the columns of the grid
+* `grid-template-rows` defines the number and sizes of the rows of the grid
+* `grid-template` is a shorthand for defining both `grid-template-columns` and `grid-template-rows` in one line
+* `grid-gap` puts blank space between rows and/or columns of the grid
+* `grid-row-start` and `grid-row-end` makes elements span certain rows of the grid
+* `grid-column-start` and `grid-column-end` makes elements span certain columns of the grid
+* `grid-area` is a shorthand for `grid-row-start`, `grid-column-start`, `grid-row-end`, and `grid-column-end`, all in one line
+* Examples:
+```
+ .grid {
+  display: grid;
+  width: 1000px;
+  height: 500px;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: 10% 20% 350px;
+} 
+```
+* In this example, the first row is 50 pixels tall (10% of 500), the second row is 100 pixels tall (20% of 500), and the third row is 600 pixels tall.
+
+```
+.grid {
+  display: grid;
+  width: 1000px;
+  height: 500px;
+  grid-template: 200px 300px / 20% 10% 70%;
+}
+```
+* When using grid-template, the values before the slash will determine the size of each row. The values after the slash determine the 
+  size of each column. In this example, we’ve made two rows and three columns of varying sizes.
+* By using the fr unit, we can define the size of columns and rows as a fraction of the grid’s length and width. This unit was 
+  specifically created for use in CSS Grid. Using fr makes it easier to prevent grid items from overflowing the boundaries of the grid.
+  ```
+   .grid {
+  display: grid;
+  width: 100px;
+  height: 400px;
+  grid-template: 2fr 1fr 1fr / 1fr 60px 1fr;
+  }
+  ```
+* In this example, 60 pixels are taken up by the second column. Therefore the first and third columns have 40 available to split between them. Since each gets one fraction of the total, they both end up being 20 pixels wide.
+* The repeat function will duplicate the specifications for rows or columns a given number of times.
+```
+ grid-template-columns: repeat(3, 100px);
+ grid-template-columns: repeat(2, 20px 50px);
+ repeat(5, 1fr);
+```
+* The third example above will create four columns where the first and third columns will be 20 pixels wide and the second and fourth 
+  will be 50 pixels wide.
+* Sometimes you might want a grid to resize based on the size of your web browser.
+  In these situations, you might want to prevent a row or column from getting too big or too small. For example, if you have a 100-pixel   wide image in your grid, you probably don’t want its column to get thinner than 100 pixels! The `minmax()` function can help us solve 
+  this problem.
+  ```
+  .grid {
+  display: grid;
+  grid-template-columns: 100px minmax(100px, 500px) 100px;
+  }
+  ```
+* In this example, the first and third columns will always be 100 pixels wide, no matter the size of the grid. The second column, 
+  however, will vary in size as the overall grid resizes. The second column will always be between 100 and 500 pixels wide.
+* Grid tem examples:
+  ```
+  .item {
+  grid-row-start: 4;
+  grid-row-end: 6;
+  } ====> .item {
+  grid-row: 4 / 6;
+  }
+  
+  
+  When using these properties, we can use the keyword span to start or end a column or row relative to its other end. Look at how span i   is used in the code below:
+  .item {
+  grid-column-start: 4;
+  grid-column-end: span 2;
+  }
+  
+  This is telling the item element to begin in column four and take up two columns of space.
+  
+  .item {
+  grid-column: 4 / 6; (here 6 is exlcusive)
+  }
+  
+  .item {
+  grid-column-start: 4;
+  grid-column-end: span 2;
+  }
+  
+  .item {
+  grid-area: 2 / 3 / 4 / span 5;
+  }
+  ```
+
 __CSS COLOR__
 _There are four ways to represent color in CSS:_
 
