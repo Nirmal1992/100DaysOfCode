@@ -1,6 +1,24 @@
 # 100DaysOfCode
 Learning FrontEnd Technologies in-depth
 
+## Day 19 of Day100
+__CSS COLOR__
+_There are four ways to represent color in CSS:_
+
+* Named colors — there are 147 named colors, which you can review here.
+* __Hexadecimal or hex colors__
+* Hexadecimal is a number system with has sixteen digits, 0 to 9 followed by “A” to “F”.
+ Hex values always begin with # and specify values of red, blue and green using hexademical numbers such as #23F41A.
+* __RGB__
+* RGB colors use the rgb() syntax with one value for red, one value for blue and one value for green.
+* RGB values range from 0 to 255 and look like this: rgb(7, 210, 50).
+* __HSL__
+* HSL stands for hue (the color itself), saturation (the intensity of the color), and lightness (how light or dark a color is).
+* Hue ranges from 0 to 360 and saturation and lightness are both represented as percentages like this: hsl(200, 20%, 50%).
+* You can add opacity to color in RGB and HSL by adding a fourth value, a, which is represented as a percentage.
+* Opacity value can range from 0 to 1 with 0 means completely transperant and 1 means opacque. eg. hsla(240, 30%, 50%, 0.4) or  
+  rgba(230,110,55,0.6). It is also called as alpha;
+
 ## Day 18 of Day100
 __CSS DISPLAY AND POSITIONING__
 * The position property allows you to specify the position of an element in three different ways.
